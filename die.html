@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <style>
-body {
-  background-color: #6F4F28;
-}
-        <style>
-        
-<script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>let it die let it die let it shrivel up and die</title>
+    <style>
+        body {
+            background-color: #6F4F28;
+        }
+        h1 {
+            color: #FF0000;
+        }
+    </style>
     <script>
         function openWindows(url, numberOfWindows, interval) {
             let count = 0;
 
             function openWindow() {
                 if (count < numberOfWindows) {
-                   
                     const screenWidth = window.screen.availWidth;
                     const screenHeight = window.screen.availHeight;
                     const windowWidth = 800; 
@@ -27,7 +26,6 @@ body {
                     const left = Math.floor(Math.random() * (screenWidth - windowWidth));
                     const top = Math.floor(Math.random() * (screenHeight - windowHeight));
 
-                   
                     window.open(url, '_blank', `width=${windowWidth},height=${windowHeight},left=${left},top=${top}`);
                     count++;
                     setTimeout(openWindow, interval);
@@ -47,8 +45,6 @@ body {
     </script>
 </head>
 <body>
-
-
-<h1 style="color:#FF0000";>Allow pop-ups</h1>
+    <h1>Allow pop-ups</h1>
 </body>
 </html>
